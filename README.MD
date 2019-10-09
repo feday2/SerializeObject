@@ -20,7 +20,7 @@ Library supports nex types of object properties:
 
 * String
 * Integer
-* double
+* Double
 * Boolean
 * Array
 * Null
