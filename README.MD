@@ -11,9 +11,9 @@ Serialize object to JSON, YAML or XML
 
     $serializator = new SerializeObject();
 
-    $json = $ser->JsonEncode($test);
-    $xml = $ser->XmlEncode($test);
-    $yml = $ser->YamlEncode($test);
+    $json = $serializator->JsonEncode($test);
+    $xml = $serializator->XmlEncode($test);
+    $yml = $serializator->YamlEncode($test);
 
 ## Support types ##
 Library supports nex types of object properties:
