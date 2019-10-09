@@ -16,7 +16,7 @@ Serialize object to JSON, YAML or XML
     $yml = $serializator->YamlEncode($test);
 
 ## Support types ##
-Library supports nex types of object properties:
+Library supports next types of object properties:
 
 * String
 * Integer
