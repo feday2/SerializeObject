@@ -8,7 +8,7 @@ use Symfony\Component\Yaml\Yaml;
 final class SerializeObject extends AbstractSerialize implements SerializeInterface
 {
 
-    private $supportTypes = ['integer', 'boolean', 'NULL', 'string'];
+    private $supportTypes = ['integer', 'boolean', 'NULL', 'string', 'double'];
 
     private function checkTypesSupport(array $array)
     {

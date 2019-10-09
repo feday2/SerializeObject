@@ -7,7 +7,7 @@ class testObject
     public $varArray = [ '0hello' => ['0aasdf' => 'asdf', 12 => '123'], 12 => 'test' ];
     public $varStr = '   li\nl"al"u\'\'l';
     public $varBull = false;
-    public $varInt = 47;
+    public $varInt = 47.24;
     public $varNull = NULL;
     public $varNoInit;
 }
