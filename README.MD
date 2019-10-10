@@ -9,10 +9,13 @@ Serialize object to JSON, YAML or XML
 
 ## Usage ##
 ```php
-$serializator = new SerializeObject();
-$json = $serializator->JsonEncode($test);
-$xml = $serializator->XmlEncode($test);
-$yml = $serializator->YamlEncode($test);
+$serializeJson = new SerializeJson();
+$serializeXml = new SerializeXml();
+$serializeYaml = new SerializeYaml();
+
+$json = $serializeJson->Encode($test);
+$xml = $serializeXml->Encode($test);
+$yml = $serializeYaml->Encode($test);
 ```
 ## Support types ##
 Library supports next types of object properties:

@@ -8,7 +8,7 @@ final class SerializeJson extends AbstractSerialize implements SerializeInterfac
     public function Encode($object)
     {
         $properties = $this->getProperties($object);
-        $this->checkTypesSupport($properties);
+        $this->ensureIsSupportedTypes($properties);
         return json_encode($properties);
     }
 

@@ -12,12 +12,12 @@ abstract class AbstractSerialize implements SerializeInterface
         return get_object_vars($object);
     }
 
-    public function checkTypesSupport(array $array)
+    public function ensureIsSupportedTypes(array $array)
     {
         foreach ($array as $el) {
             $type = gettype($el);
             if ( $type == 'array' ) {
-                $this->checkTypesSupport($el);
+                $this->ensureIsSupportedTypes($el);
             } elseif ( !in_array($type, self::SUPPORT_TYPES ) ) {
                 throw new Exception('data type "'.$type.'" not supported');
             }

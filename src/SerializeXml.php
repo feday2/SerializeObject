@@ -5,20 +5,6 @@ require_once __DIR__ . '/AbstractSerialize.php';
 final class SerializeXml extends AbstractSerialize implements SerializeInterface
 {
 
-    const SUPPORT_TYPES = ['integer', 'boolean', 'NULL', 'string', 'double'];
-
-    private function checkTypesSupport(array $array)
-    {
-        foreach ($array as $el) {
-            $type = gettype($el);
-            if ( $type == 'array' ) {
-                $this->checkTypesSupport($el);
-            } elseif ( !in_array($type, $this->supportTypes ) ) {
-                throw new Exception('data type "'.$type.'" not supported');
-            }
-        }
-    }
-
     private function beautyXML($xmlStr)
     {
         $domObj = new DOMDocument();
@@ -47,7 +33,7 @@ final class SerializeXml extends AbstractSerialize implements SerializeInterface
     public function Encode($object)
     {
         $properties = $this->getProperties($object);
-        $this->checkTypesSupport($properties);
+        $this->ensureIsSupportedTypes($properties);
         $xml = new SimpleXMLElement('<'.get_class($object).'/>');
         $this->addToXML($properties, $xml);
         $xmlData = $this->beautyXML($xml->asXML());
