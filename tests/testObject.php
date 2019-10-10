@@ -1,6 +1,7 @@
 <?php
 
-require_once __DIR__ . '/../src/SerializeObject.php';
+require_once __DIR__ . '/../src/SerializeJson.php';
+
 
 class testObject
 {
@@ -13,18 +14,21 @@ class testObject
 }
 
 $test = new testObject();
-$ser = new SerializeObject();
+$ser = new SerializeJson();
 
-$json = $ser->JsonEncode($test);
-$xml = $ser->XmlEncode($test);
-$yml = $ser->YamlEncode($test);
+$json = $ser->Encode($test);
+// $xml = $ser->XmlEncode($test);
+// $yml = $ser->YamlEncode($test);
 
-echo '----------------YAML-----------------------'. PHP_EOL;
-echo $yml. PHP_EOL;
-echo '-------------------------------------------'. PHP_EOL;
-echo '----------------XML------------------------'. PHP_EOL;
-echo $xml. PHP_EOL;
-echo '-------------------------------------------'. PHP_EOL;
+
+
+
+// echo '----------------YAML-----------------------'. PHP_EOL;
+// echo $yml. PHP_EOL;
+// echo '-------------------------------------------'. PHP_EOL;
+// echo '----------------XML------------------------'. PHP_EOL;
+// echo $xml. PHP_EOL;
+// echo '-------------------------------------------'. PHP_EOL;
 echo '----------------JSON-----------------------'. PHP_EOL;
 echo $json. PHP_EOL;
 echo '-------------------------------------------'. PHP_EOL;
