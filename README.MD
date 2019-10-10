@@ -8,13 +8,12 @@ Serialize object to JSON, YAML or XML
     $ composer install
 
 ## Usage ##
-
+```php
     $serializator = new SerializeObject();
-
     $json = $serializator->JsonEncode($test);
     $xml = $serializator->XmlEncode($test);
     $yml = $serializator->YamlEncode($test);
-
+```
 ## Support types ##
 Library supports next types of object properties:
 
