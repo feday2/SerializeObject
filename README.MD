@@ -2,11 +2,11 @@
 Serialize object to JSON, YAML or XML
 
 ## Installation ##
-
-    $ git clone https://github.com/feday2/SerializeObject.git
-    $ cd SerializeObject
-    $ composer install
-
+```bash
+$ git clone https://github.com/feday2/SerializeObject.git
+$ cd SerializeObject
+$ composer install
+```
 ## Usage ##
 ```php
 $serializeJson = new SerializeJson();
