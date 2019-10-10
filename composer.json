@@ -8,7 +8,12 @@
         "email": "feday2@gmail.com"
       }
   ],
-    "require": {
-      "symfony/yaml": "^3.2"
+  "require": {
+    "symfony/yaml": "^3.2"
+  },
+  "autoload": {
+    "psr-4": {
+        "app\\": "src/"
     }
+  }
 }

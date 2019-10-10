@@ -1,5 +1,7 @@
 <?php
 
+namespace app;
+
 require_once __DIR__ . '/AbstractSerialize.php';
 require_once __DIR__ . '/../vendor/autoload.php';
 

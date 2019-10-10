@@ -1,5 +1,7 @@
 <?php
 
+namespace app;
+
 require_once __DIR__ . '/AbstractSerialize.php';
 
 final class SerializeJson extends AbstractSerialize implements SerializeInterface
@@ -9,7 +11,7 @@ final class SerializeJson extends AbstractSerialize implements SerializeInterfac
     {
         $properties = $this->getProperties($object);
         $this->ensureIsSupportedTypes($properties);
-        return json_encode($properties);
+        return \json_encode($properties);
     }
 
 }
