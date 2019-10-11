@@ -2,6 +2,8 @@
 
 namespace Feday2\SerializeObject;
 
+use Feday2\SerializeObject\Errors\NotSupportedTypeError;
+
 abstract class AbstractSerialize implements SerializeInterface
 {
 
@@ -19,7 +21,7 @@ abstract class AbstractSerialize implements SerializeInterface
             if ( $type == 'array' ) {
                 $this->ensureIsSupportedTypes($el);
             } elseif ( !\in_array($type, self::SUPPORT_TYPES ) ) {
-                throw new \Exception('data type "'.$type.'" not supported');
+                throw new NotSupportedTypeError('data type "'.$type.'" not supported');
             }
         }
     }

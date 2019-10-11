@@ -1,7 +1,5 @@
 <?php
 
-// require_once __DIR__ . '/../src/SerializeJson.php';
-// require_once __DIR__ . '/../src/SerializeXml.php';
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use Feday2\SerializeObject\{SerializeJson, SerializeXml, SerializeYaml};

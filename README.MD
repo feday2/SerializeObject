@@ -9,6 +9,12 @@ $ composer install
 ```
 ## Usage ##
 ```php
+<?php
+
+use Feday2\SerializeObject\{SerializeJson, SerializeXml, SerializeYaml};
+
+...
+
 $serializeJson = new SerializeJson();
 $serializeXml = new SerializeXml();
 $serializeYaml = new SerializeYaml();
