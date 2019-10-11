@@ -1,6 +1,8 @@
 <?php
 
+namespace Feday2\SerializeObject;
+
 interface SerializeInterface
 {
-    public function getProperties($object);
+    public function Encode($object);
 }

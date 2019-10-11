@@ -1,5 +1,19 @@
 {
-    "require": {
-      "symfony/yaml": "^3.2"
+  "name": "feday2/serialize-object",
+  "description": "serialize object to formats json, xml, yaml",
+  "type": "library",
+  "authors": [
+      {
+        "name": "feday2",
+        "email": "feday2@gmail.com"
+      }
+  ],
+  "require": {
+    "symfony/yaml": "^3.2"
+  },
+  "autoload": {
+    "psr-4": {
+        "Feday2\\SerializeObject\\": "src/"
     }
+  }
 }

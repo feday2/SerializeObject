@@ -2,17 +2,26 @@
 Serialize object to JSON, YAML or XML
 
 ## Installation ##
-
-    $ git clone https://github.com/feday2/SerializeObject.git
-    $ cd SerializeObject
-    $ composer install
+```bash
+$ git clone https://github.com/feday2/SerializeObject.git && cd SerializeObject
+$ composer install
+```
 
 ## Usage ##
 ```php
-$serializator = new SerializeObject();
-$json = $serializator->JsonEncode($test);
-$xml = $serializator->XmlEncode($test);
-$yml = $serializator->YamlEncode($test);
+<?php
+
+use Feday2\SerializeObject\{SerializeJson, SerializeXml, SerializeYaml};
+
+...
+
+$serializeJson = new SerializeJson();
+$serializeXml = new SerializeXml();
+$serializeYaml = new SerializeYaml();
+
+$json = $serializeJson->Encode($test);
+$xml = $serializeXml->Encode($test);
+$yml = $serializeYaml->Encode($test);
 ```
 ## Support types ##
 Library supports next types of object properties:

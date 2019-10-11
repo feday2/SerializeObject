@@ -1,6 +1,8 @@
 <?php
 
-require_once __DIR__ . '/../src/SerializeObject.php';
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use Feday2\SerializeObject\{SerializeJson, SerializeXml, SerializeYaml};
 
 class testObject
 {
@@ -13,13 +15,18 @@ class testObject
 }
 
 $test = new testObject();
-$ser = new SerializeObject();
+$ser1 = new SerializeJson();
+$ser2 = new SerializeXml();
+$ser3 = new SerializeYaml();
 
-$json = $ser->JsonEncode($test);
-$xml = $ser->XmlEncode($test);
-$yml = $ser->YamlEncode($test);
+$json = $ser1->Encode($test);
+$xml = $ser2->Encode($test);
+$yml = $ser3->Encode($test);
 
-echo '----------------YAML-----------------------'. PHP_EOL;
+
+
+
+echo '----------------YAML---------------------'. PHP_EOL;
 echo $yml. PHP_EOL;
 echo '-------------------------------------------'. PHP_EOL;
 echo '----------------XML------------------------'. PHP_EOL;
