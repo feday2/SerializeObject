@@ -1,6 +1,6 @@
 <?php
 
-namespace app;
+namespace Feday2\SerializeObject;
 
 interface SerializeInterface
 {

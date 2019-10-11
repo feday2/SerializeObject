@@ -1,8 +1,6 @@
 <?php
 
-namespace app;
-
-require_once __DIR__ . '/SerializeInterface.php';
+namespace Feday2\SerializeObject;
 
 abstract class AbstractSerialize implements SerializeInterface
 {
@@ -21,7 +19,7 @@ abstract class AbstractSerialize implements SerializeInterface
             if ( $type == 'array' ) {
                 $this->ensureIsSupportedTypes($el);
             } elseif ( !\in_array($type, self::SUPPORT_TYPES ) ) {
-                throw new Exception('data type "'.$type.'" not supported');
+                throw new \Exception('data type "'.$type.'" not supported');
             }
         }
     }

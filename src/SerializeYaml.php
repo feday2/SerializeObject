@@ -1,9 +1,6 @@
 <?php
 
-namespace app;
-
-require_once __DIR__ . '/AbstractSerialize.php';
-require_once __DIR__ . '/../vendor/autoload.php';
+namespace Feday2\SerializeObject;
 
 use Symfony\Component\Yaml\Yaml;
 

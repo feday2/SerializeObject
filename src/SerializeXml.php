@@ -1,8 +1,6 @@
 <?php
 
-namespace app;
-
-require_once __DIR__ . '/AbstractSerialize.php';
+namespace Feday2\SerializeObject;
 
 final class SerializeXml extends AbstractSerialize implements SerializeInterface
 {
