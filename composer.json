@@ -13,7 +13,7 @@
   },
   "autoload": {
     "psr-4": {
-        "Feday2\\App\\": "src/"
+        "Feday2\\SerializeObject\\": "src/"
     }
   }
 }
