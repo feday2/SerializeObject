@@ -1,5 +1,5 @@
 # Serialize object
-Serialize object to JSON, YAML or XML
+Serialize public properties of object to JSON, YAML or XML
 
 ## Installation ##
 ```bash
