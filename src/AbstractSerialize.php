@@ -11,6 +11,9 @@ abstract class AbstractSerialize implements SerializeInterface
 
     public function getProperties($object)
     {
+        if ( !\is_object($object) ) {
+            throw new NotSupportedTypeError('Parameter 1 must be object, '.\gettype($object).' given');
+        }
         return \get_object_vars($object);
     }
 

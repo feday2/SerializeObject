@@ -23,9 +23,6 @@ $json = $ser1->encode($test);
 $xml = $ser2->encode($test);
 $yml = $ser3->encode($test);
 
-
-
-
 echo '----------------YAML---------------------'. PHP_EOL;
 echo $yml. PHP_EOL;
 echo '-------------------------------------------'. PHP_EOL;
