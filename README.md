@@ -19,9 +19,9 @@ $serializeJson = new SerializeJson();
 $serializeXml = new SerializeXml();
 $serializeYaml = new SerializeYaml();
 
-$json = $serializeJson->Encode($test);
-$xml = $serializeXml->Encode($test);
-$yml = $serializeYaml->Encode($test);
+$json = $serializeJson->encode($test);
+$xml = $serializeXml->encode($test);
+$yml = $serializeYaml->encode($test);
 ```
 ## Support types ##
 Library supports next types of object properties:
