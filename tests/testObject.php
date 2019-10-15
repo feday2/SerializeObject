@@ -19,9 +19,9 @@ $ser1 = new SerializeJson();
 $ser2 = new SerializeXml();
 $ser3 = new SerializeYaml();
 
-$json = $ser1->Encode($test);
-$xml = $ser2->Encode($test);
-$yml = $ser3->Encode($test);
+$json = $ser1->encode($test);
+$xml = $ser2->encode($test);
+$yml = $ser3->encode($test);
 
 
 

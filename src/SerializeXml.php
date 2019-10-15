@@ -30,7 +30,7 @@ final class SerializeXml extends AbstractSerialize implements SerializeInterface
         }
     }
 
-    public function Encode($object)
+    public function encode($object)
     {
         $properties = $this->getProperties($object);
         $this->ensureIsSupportedTypes($properties);

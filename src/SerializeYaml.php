@@ -7,7 +7,7 @@ use Symfony\Component\Yaml\Yaml;
 final class SerializeYaml extends AbstractSerialize implements SerializeInterface
 {
 
-    public function Encode($object)
+    public function encode($object)
     {
         $properties = $this->getProperties($object);
         $this->ensureIsSupportedTypes($properties);
