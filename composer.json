@@ -15,5 +15,6 @@
     "psr-4": {
         "Feday2\\SerializeObject\\": "src/"
     }
-  }
+  },
+  "license": "MIT"
 }

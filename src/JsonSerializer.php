@@ -2,7 +2,7 @@
 
 namespace Feday2\SerializeObject;
 
-final class SerializeJson extends AbstractSerialize implements SerializeInterface
+final class JsonSerializer extends AbstractSerializer implements SerializerInterface
 {
 
     public function encode($object)

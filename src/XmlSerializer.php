@@ -2,7 +2,7 @@
 
 namespace Feday2\SerializeObject;
 
-final class SerializeXml extends AbstractSerialize implements SerializeInterface
+final class XmlSerializer extends AbstractSerializer implements SerializerInterface
 {
 
     private function beautyXML($xmlStr)
@@ -15,14 +15,14 @@ final class SerializeXml extends AbstractSerialize implements SerializeInterface
 
     private function addToXML($array, \SimpleXMLElement $xmlObj)
     {
-        foreach ( $array as $key => $el ) {
-            if ( \gettype($el) == 'array' ) {
+        foreach ($array as $key => $el) {
+            if (\gettype($el) == 'array') {
                 $child = $xmlObj->addChild('items');
                 $child->addAttribute('name', $key);
                 $this->addToXML($el, $child);
                 continue;
             }
-            if  ( \gettype($el) !== 'string' ) {
+            if  (\gettype($el) !== 'string') {
                 $el = \var_export($el, true);
             }
             $child = $xmlObj->addChild('item', $el);

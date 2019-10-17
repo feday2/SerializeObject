@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use Feday2\SerializeObject\{SerializeJson, SerializeXml, SerializeYaml};
+use Feday2\SerializeObject\{JsonSerializer, XmlSerializer, YamlSerializer};
 
 class testObject
 {
@@ -15,10 +15,9 @@ class testObject
 }
 
 $test = new testObject();
-$ser1 = new SerializeJson();
-$ser2 = new SerializeXml();
-$ser3 = new SerializeYaml();
-
+$ser1 = new JsonSerializer();
+$ser2 = new XmlSerializer();
+$ser3 = new YamlSerializer();
 $json = $ser1->encode($test);
 $xml = $ser2->encode($test);
 $yml = $ser3->encode($test);

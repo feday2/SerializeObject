@@ -4,7 +4,7 @@ namespace Feday2\SerializeObject;
 
 use Symfony\Component\Yaml\Yaml;
 
-final class SerializeYaml extends AbstractSerialize implements SerializeInterface
+final class YamlSerializer extends AbstractSerializer implements SerializerInterface
 {
 
     public function encode($object)

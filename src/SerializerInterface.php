@@ -2,7 +2,7 @@
 
 namespace Feday2\SerializeObject;
 
-interface SerializeInterface
+interface SerializerInterface
 {
     public function encode($object);
 }
