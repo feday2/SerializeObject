@@ -3,8 +3,7 @@ Serialize public properties of object to JSON, YAML or XML
 
 ## Installation ##
 ```bash
-$ git clone https://github.com/feday2/SerializeObject.git && cd SerializeObject
-$ composer install
+$ composer require feday2/serialize-object
 ```
 
 ## Usage ##
